@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 export const metadata: Metadata = {
-  title: "CTK46 - Lab 01",
-  description: "Bài thực hành 1 - Các công nghệ mới trong PTPM",
+  title: "Portfolio Nguyễn Trần Mai Linh",
+  description: "Website portfolio cá nhân",
 };
 
 export default function RootLayout({
@@ -13,7 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body>{children}</body>
+      <body className="min-h-screen flex flex-col bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
+        {/* Thanh Navbar sẽ nằm ở trên cùng */}
+        <Navbar />
+        
+        {/* Phần nội dung các trang sẽ thay đổi ở giữa */}
+        <main className="flex-1">{children}</main>
+        
+        {/* Footer nằm ở dưới cùng */}
+        <Footer />
+      </body>
     </html>
   );
 }
