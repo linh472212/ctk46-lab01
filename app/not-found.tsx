@@ -1,36 +1,19 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-export default function NotFoundPage() {
+export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4 py-20">
-      <div className="max-w-3xl rounded-[2rem] bg-white p-10 shadow-2xl ring-1 ring-slate-200">
-        <div className="flex flex-col items-center text-center gap-6">
-          <div className="relative flex h-48 w-48 items-center justify-center rounded-full bg-blue-50 shadow-inner">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-100 to-transparent animate-pulse"></div>
-            <div className="text-7xl font-black text-blue-700">404</div>
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold text-slate-900">Trang không tìm thấy</h1>
-            <p className="mt-3 text-slate-600">
-              Có vẻ như bạn đã tìm đến một trang không tồn tại. Hãy quay lại trang chính hoặc kiểm tra lại đường dẫn.
-            </p>
-          </div>
-          <div className="w-full rounded-3xl border border-slate-200 bg-slate-50 p-6">
-            <div className="flex flex-col items-center gap-3">
-              <div className="h-24 w-24 rounded-3xl bg-white shadow-md flex items-center justify-center text-5xl animate-bounce">
-                🚀
-              </div>
-              <p className="text-slate-500">Hãy thử đi đến một trang khác hoặc trở về trang chủ.</p>
-            </div>
-          </div>
-          <Link
-            href="/"
-            className="inline-flex rounded-full bg-blue-600 px-8 py-3 text-white transition hover:bg-blue-500"
-          >
-            Trở về trang chủ
-          </Link>
-        </div>
-      </div>
+    <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center">
+      <div className="text-9xl mb-8 animate-bounce">🛸</div>
+      <h1 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight mb-6">404 - Lạc đường rồi!</h1>
+      <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Trang bạn đang tìm kiếm dường như không tồn tại, đã bị xóa hoặc bạn đã gõ sai đường dẫn. Hãy cùng quay về trạm không gian an toàn nhé!
+      </p>
+      <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-10 py-6 text-lg font-bold shadow-xl shadow-emerald-500/30 transition-all hover:-translate-y-1">
+        <Link href="/">
+          ← Trở về Trang chủ
+        </Link>
+      </Button>
     </div>
   );
 }

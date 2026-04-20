@@ -54,6 +54,7 @@ function NavLinks({ mobile, onClick }: { mobile?: boolean; onClick?: () => void 
       <Link href="/skills" className={baseClass} onClick={onClick}>Kỹ năng</Link>
       <Link href="/blog" className={baseClass} onClick={onClick}>Blog</Link>
       <Link href="/projects" className={baseClass} onClick={onClick}>Dự án</Link>
+      <Link href="/countries" className={baseClass} onClick={onClick}>Quốc gia</Link>
       <Link href="/contact" className={baseClass} onClick={onClick}>Liên hệ</Link>
     </>
   );

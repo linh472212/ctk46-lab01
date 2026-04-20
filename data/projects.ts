@@ -1,9 +1,9 @@
 export interface Project {
-  id: string; // Dùng làm URL
+  id: string;
   title: string;
   description: string;
   tech: string[];
-  details: string; // Nội dung chi tiết trong trang riêng
+  details: string;
 }
 
 export const projects: Project[] = [

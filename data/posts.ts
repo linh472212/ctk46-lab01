@@ -5,7 +5,7 @@ export interface Post {
   content: string;
   date: string;
   category: string;
-  author: string; // <-- Đã thêm trường tác giả
+  author: string;
 }
 
 export const posts: Post[] = [
